@@ -5,13 +5,23 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEditor.Rendering;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
-    [Header ("Volume Setting")]
+    [Header ("Volume Settings")]
     [SerializeField] private TMP_Text volumeTextValue = null;
     [SerializeField] private Slider volumeSliderValue = null;
     [SerializeField] private float defaultVolume = 1.0f;
+
+    [Header ("Gameplay Settings")]
+    [SerializeField] private TMP_Text controllerSenTextValue = null;
+    [SerializeField] private Slider controllerSenSlider = null;
+    [SerializeField] private int defaultSen = 4;
+    public int mainControllerSen = 4;
+
+    [Header("Toggle Settings")]
+    [SerializeField] private Toggle invertYToggle = null;
 
     [Header("Confirmation Prompt")]
     [SerializeField] private GameObject confirmationPrompt;
@@ -19,8 +29,7 @@ public class MainMenu : MonoBehaviour
     [Header("Levels to load")]
     public string _newGameLevel;
     private string levelToLoad;
-    [SerializeField]
-    private GameObject noSavedGameDialogueBox = null;
+    [SerializeField] private GameObject noSavedGameDialogueBox = null;
 
     public void NewGameDialogueYesBtn()
     {
@@ -59,6 +68,31 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(ConfirmationBox());
     }
 
+    public void SetControllerSen(float sensitivity)
+    {
+        mainControllerSen = Mathf.RoundToInt(sensitivity);
+        controllerSenTextValue.text = sensitivity.ToString("0");
+    }
+
+    public void GameplayApply()
+    {
+        if (invertYToggle.isOn)
+        {
+            PlayerPrefs.SetInt("masterInvertY", 1);
+            //invert Y
+            Debug.Log("Y has been inverted");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("masterInvertY", 0);
+            //not invert Y
+            Debug.Log("Y has not been inverted");
+        }
+
+        PlayerPrefs.SetFloat("masterSen", mainControllerSen);
+        StartCoroutine(ConfirmationBox());
+    }
+
     public void ResetButton(string MenuType)
     {
         if (MenuType == "Audio")
@@ -67,6 +101,15 @@ public class MainMenu : MonoBehaviour
             volumeSliderValue.value = defaultVolume;
             volumeTextValue.text = defaultVolume.ToString("0.0");
             VolumeApply();
+        }
+
+        if(MenuType == "Gameplay")
+        {
+            controllerSenTextValue.text = defaultSen.ToString("0");
+            controllerSenSlider.value = defaultSen;
+            mainControllerSen = defaultSen;
+            invertYToggle.isOn = false;
+            GameplayApply();
         }
     }
 
