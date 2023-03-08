@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEditor.Rendering;
 using System;
+using System.Linq;
 
 public class MainMenu : MonoBehaviour
 {
@@ -36,7 +38,6 @@ public class MainMenu : MonoBehaviour
     private bool _isFullScreen;
     private float _brightnessLevel;
 
-
     [Header("Confirmation Prompt")]
     [SerializeField] private GameObject confirmationPrompt;
 
@@ -51,7 +52,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        resolutions = Screen.resolutions;
+        resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray(); ;
         resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
@@ -70,7 +71,7 @@ public class MainMenu : MonoBehaviour
         }
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
-        //resolutionDropdown.RefreshShownValue();
+        resolutionDropdown.RefreshShownValue();
     }
 
     public void SetResolution(int resolutionIndex)
