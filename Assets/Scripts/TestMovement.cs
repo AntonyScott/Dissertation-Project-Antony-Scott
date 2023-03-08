@@ -34,6 +34,7 @@ public class TestMovement : MonoBehaviour
         input.Enable();
         input.Player.Movement.performed += OnMovementPerformed;
         input.Player.Movement.canceled += OnMovementCancelled;
+        input.Player.Exit.performed += OnExit;
     }
 
     private void OnDisable()
@@ -65,5 +66,11 @@ public class TestMovement : MonoBehaviour
     private void OnMovementCancelled(InputAction.CallbackContext value) //takes in movement actions which have been cancelled and passes through to OnDisable()
     {
         movement = Vector2.zero;
+    }
+
+    private void OnExit(InputAction.CallbackContext button)
+    {
+        Debug.Log("Quit");
+        Application.Quit();
     }
 }
