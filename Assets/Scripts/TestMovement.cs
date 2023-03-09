@@ -47,7 +47,7 @@ public class TestMovement : MonoBehaviour
     private void FixedUpdate() //fixed update used for physics calculations such as player movement
     {
         //Debug.Log("Vector: " + moveVector);
-        //Debug.Log("Position: " + transform.position);
+        Debug.Log("Player Position: " + transform.position);
         //rb.velocity= moveVector * moveSpeed;
         if(!isDashing)
         {

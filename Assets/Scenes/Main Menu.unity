@@ -1802,6 +1802,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339414363}
   m_CullTransparentMesh: 1
+--- !u!1 &343692507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2947039531589357027, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
+  m_PrefabInstance: {fileID: 290357764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &344355826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2947039531589357027, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
@@ -2657,76 +2662,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546873809}
   m_CullTransparentMesh: 1
---- !u!1 &553471167
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 553471169}
-  - component: {fileID: 553471168}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &553471168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553471167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: d23036e1df4b65d4a97498e84df48a09, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: fc0fb975-fd9c-4d43-bbfc-e8c79221db17
-    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5bbfd367-4798-4f92-9364-9911145ee0ed
-    m_ActionName: Player/Exit[/Keyboard/escape]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!4 &553471169
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553471167}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557523207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2709,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
   m_PrefabInstance: {fileID: 1273958059}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 601657041}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -3018,6 +2953,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580967780}
   m_CullTransparentMesh: 1
+--- !u!1 &601657041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2947039531589357027, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
+  m_PrefabInstance: {fileID: 1273958059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &620340900
 GameObject:
   m_ObjectHideFlags: 0
@@ -4669,6 +4609,10 @@ PrefabInstance:
       value: UnityEngine.EventSystems.EventSystem, UnityEngine.UI
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -5205,7 +5149,7 @@ PrefabInstance:
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 344355826}
+      objectReference: {fileID: 601657041}
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
@@ -5673,7 +5617,7 @@ PrefabInstance:
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 344355826}
+      objectReference: {fileID: 601657041}
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
@@ -6817,7 +6761,7 @@ PrefabInstance:
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 344355826}
+      objectReference: {fileID: 343692507}
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
@@ -11832,7 +11776,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
   m_PrefabInstance: {fileID: 290357764}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 343692507}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -11896,7 +11840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Game Title
+  m_text: Deadguard
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 276eb540e5ae10d44922702f93817ad1, type: 2}
   m_sharedMaterial: {fileID: -2140965597567883162, guid: 276eb540e5ae10d44922702f93817ad1, type: 2}
@@ -11930,7 +11874,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 300
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -11940,7 +11884,7 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
+  m_wordWrappingRatios: 0.897
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
