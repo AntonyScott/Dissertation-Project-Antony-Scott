@@ -226,7 +226,7 @@ public partial class @MyGameActions : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""UI1"",
+            ""name"": ""UI"",
             ""id"": ""c7019b13-4063-496d-8211-8469d93b2db6"",
             ""actions"": [
                 {
@@ -792,18 +792,18 @@ public partial class @MyGameActions : IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Exit = m_Player.FindAction("Exit", throwIfNotFound: true);
-        // UI1
-        m_UI1 = asset.FindActionMap("UI1", throwIfNotFound: true);
-        m_UI1_Navigate = m_UI1.FindAction("Navigate", throwIfNotFound: true);
-        m_UI1_Submit = m_UI1.FindAction("Submit", throwIfNotFound: true);
-        m_UI1_Cancel = m_UI1.FindAction("Cancel", throwIfNotFound: true);
-        m_UI1_Point = m_UI1.FindAction("Point", throwIfNotFound: true);
-        m_UI1_Click = m_UI1.FindAction("Click", throwIfNotFound: true);
-        m_UI1_ScrollWheel = m_UI1.FindAction("ScrollWheel", throwIfNotFound: true);
-        m_UI1_MiddleClick = m_UI1.FindAction("MiddleClick", throwIfNotFound: true);
-        m_UI1_RightClick = m_UI1.FindAction("RightClick", throwIfNotFound: true);
-        m_UI1_TrackedDevicePosition = m_UI1.FindAction("TrackedDevicePosition", throwIfNotFound: true);
-        m_UI1_TrackedDeviceOrientation = m_UI1.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
+        m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
+        m_UI_Cancel = m_UI.FindAction("Cancel", throwIfNotFound: true);
+        m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
+        m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
+        m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
+        m_UI_MiddleClick = m_UI.FindAction("MiddleClick", throwIfNotFound: true);
+        m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
+        m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
+        m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -901,74 +901,74 @@ public partial class @MyGameActions : IInputActionCollection2, IDisposable
     }
     public PlayerActions @Player => new PlayerActions(this);
 
-    // UI1
-    private readonly InputActionMap m_UI1;
-    private IUI1Actions m_UI1ActionsCallbackInterface;
-    private readonly InputAction m_UI1_Navigate;
-    private readonly InputAction m_UI1_Submit;
-    private readonly InputAction m_UI1_Cancel;
-    private readonly InputAction m_UI1_Point;
-    private readonly InputAction m_UI1_Click;
-    private readonly InputAction m_UI1_ScrollWheel;
-    private readonly InputAction m_UI1_MiddleClick;
-    private readonly InputAction m_UI1_RightClick;
-    private readonly InputAction m_UI1_TrackedDevicePosition;
-    private readonly InputAction m_UI1_TrackedDeviceOrientation;
-    public struct UI1Actions
+    // UI
+    private readonly InputActionMap m_UI;
+    private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_Navigate;
+    private readonly InputAction m_UI_Submit;
+    private readonly InputAction m_UI_Cancel;
+    private readonly InputAction m_UI_Point;
+    private readonly InputAction m_UI_Click;
+    private readonly InputAction m_UI_ScrollWheel;
+    private readonly InputAction m_UI_MiddleClick;
+    private readonly InputAction m_UI_RightClick;
+    private readonly InputAction m_UI_TrackedDevicePosition;
+    private readonly InputAction m_UI_TrackedDeviceOrientation;
+    public struct UIActions
     {
         private @MyGameActions m_Wrapper;
-        public UI1Actions(@MyGameActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Navigate => m_Wrapper.m_UI1_Navigate;
-        public InputAction @Submit => m_Wrapper.m_UI1_Submit;
-        public InputAction @Cancel => m_Wrapper.m_UI1_Cancel;
-        public InputAction @Point => m_Wrapper.m_UI1_Point;
-        public InputAction @Click => m_Wrapper.m_UI1_Click;
-        public InputAction @ScrollWheel => m_Wrapper.m_UI1_ScrollWheel;
-        public InputAction @MiddleClick => m_Wrapper.m_UI1_MiddleClick;
-        public InputAction @RightClick => m_Wrapper.m_UI1_RightClick;
-        public InputAction @TrackedDevicePosition => m_Wrapper.m_UI1_TrackedDevicePosition;
-        public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI1_TrackedDeviceOrientation;
-        public InputActionMap Get() { return m_Wrapper.m_UI1; }
+        public UIActions(@MyGameActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
+        public InputAction @Submit => m_Wrapper.m_UI_Submit;
+        public InputAction @Cancel => m_Wrapper.m_UI_Cancel;
+        public InputAction @Point => m_Wrapper.m_UI_Point;
+        public InputAction @Click => m_Wrapper.m_UI_Click;
+        public InputAction @ScrollWheel => m_Wrapper.m_UI_ScrollWheel;
+        public InputAction @MiddleClick => m_Wrapper.m_UI_MiddleClick;
+        public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
+        public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
+        public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(UI1Actions set) { return set.Get(); }
-        public void SetCallbacks(IUI1Actions instance)
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void SetCallbacks(IUIActions instance)
         {
-            if (m_Wrapper.m_UI1ActionsCallbackInterface != null)
+            if (m_Wrapper.m_UIActionsCallbackInterface != null)
             {
-                @Navigate.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnNavigate;
-                @Navigate.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnNavigate;
-                @Navigate.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnNavigate;
-                @Submit.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnSubmit;
-                @Submit.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnSubmit;
-                @Submit.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnSubmit;
-                @Cancel.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnCancel;
-                @Cancel.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnCancel;
-                @Cancel.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnCancel;
-                @Point.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnPoint;
-                @Point.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnPoint;
-                @Point.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnPoint;
-                @Click.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnClick;
-                @Click.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnClick;
-                @Click.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnClick;
-                @ScrollWheel.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnScrollWheel;
-                @ScrollWheel.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnScrollWheel;
-                @ScrollWheel.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnScrollWheel;
-                @MiddleClick.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnMiddleClick;
-                @MiddleClick.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnMiddleClick;
-                @MiddleClick.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnMiddleClick;
-                @RightClick.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnRightClick;
-                @RightClick.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnRightClick;
-                @RightClick.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnRightClick;
-                @TrackedDevicePosition.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnTrackedDevicePosition;
-                @TrackedDevicePosition.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnTrackedDevicePosition;
-                @TrackedDevicePosition.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnTrackedDevicePosition;
-                @TrackedDeviceOrientation.started -= m_Wrapper.m_UI1ActionsCallbackInterface.OnTrackedDeviceOrientation;
-                @TrackedDeviceOrientation.performed -= m_Wrapper.m_UI1ActionsCallbackInterface.OnTrackedDeviceOrientation;
-                @TrackedDeviceOrientation.canceled -= m_Wrapper.m_UI1ActionsCallbackInterface.OnTrackedDeviceOrientation;
+                @Navigate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Navigate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Navigate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Submit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Submit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Submit.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Cancel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Point.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Point.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Point.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @ScrollWheel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @ScrollWheel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @ScrollWheel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @MiddleClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
+                @MiddleClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
+                @MiddleClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
+                @RightClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @RightClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @RightClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @TrackedDevicePosition.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
+                @TrackedDevicePosition.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
+                @TrackedDevicePosition.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
+                @TrackedDeviceOrientation.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
+                @TrackedDeviceOrientation.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
+                @TrackedDeviceOrientation.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
             }
-            m_Wrapper.m_UI1ActionsCallbackInterface = instance;
+            m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Navigate.started += instance.OnNavigate;
@@ -1004,13 +1004,13 @@ public partial class @MyGameActions : IInputActionCollection2, IDisposable
             }
         }
     }
-    public UI1Actions @UI1 => new UI1Actions(this);
+    public UIActions @UI => new UIActions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnExit(InputAction.CallbackContext context);
     }
-    public interface IUI1Actions
+    public interface IUIActions
     {
         void OnNavigate(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
