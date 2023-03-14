@@ -16,6 +16,7 @@ public class TestMovement : MonoBehaviour
     //rigidbody and moveVector variables
     private Rigidbody2D rb = null;
     private Vector2 movement = Vector2.zero;
+    public Animator animator;
 
     //movement bool variables
     private bool isRunning = false;
@@ -54,6 +55,21 @@ public class TestMovement : MonoBehaviour
             if(movement.magnitude > 0.1f)
             {
                 rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            }
+        }
+    }
+
+    private void UpdateAnimationStates()
+    {
+        if(movement.x < 0)
+        {
+            if (movement.x < 0) //moving left
+            {
+                animator.SetBool("isWalkingLeft", true);
+            }
+            else
+            {
+                animator.SetBool("isWalkingLeft", false);
             }
         }
     }
