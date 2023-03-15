@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() //fixed update used for physics calculations such as player movement
     {
         //Debug.Log("Vector: " + moveVector);
-        Debug.Log("Player Position: " + transform.position);
+        Debug.Log("Player Position: " + transform.position); //outputs player position in world space to the console
         //rb.velocity= moveVector * moveSpeed;
         if(!isDashing)
         {
@@ -61,34 +61,36 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //void used for handling animation in relation to x,y coordinates
     private void UpdateAnimationStates()
     {
         Vector2 direction = movement.normalized;
 
+        //animations are called through code rather than animator
         if(direction.x > 0)
         {
             animator.Play("Player_Run_Right");
-            Debug.Log("Walking right");
+            //Debug.Log("Walking right");
         }
         else if(direction.x < 0)
         {
             animator.Play("Player_Run_Left");
-            Debug.Log("Walking left");
+            //Debug.Log("Walking left");
         }
         else if (direction.y > 0)
         {
             animator.Play("Player_Walking_Up");
-            Debug.Log("Walking up");
+            //Debug.Log("Walking up");
         }
         else if (direction.y < 0)
         {
             animator.Play("Player_Walking_Down");
-            Debug.Log("Walking down");
+            //Debug.Log("Walking down");
         }
         else
         {
             animator.Play("Player_Idle");
-            Debug.Log("Idle");
+            //Debug.Log("Idle");
         }
     }
 
