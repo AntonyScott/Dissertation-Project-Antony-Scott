@@ -10402,7 +10402,7 @@ MonoBehaviour:
   qualityDropdown: {fileID: 2112973399}
   fullscreenToggle: {fileID: 117759220}
   confirmationPrompt: {fileID: 1952351480}
-  _newGameLevel: Overworld
+  _newGameLevel: Introduction
   noSavedGameDialogueBox: {fileID: 960510209}
   resolutionDropdown: {fileID: 1708697989}
 --- !u!4 &1526909758

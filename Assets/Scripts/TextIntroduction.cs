@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TextIntroduction : MonoBehaviour
@@ -27,6 +28,7 @@ public class TextIntroduction : MonoBehaviour
             yield return FadeText(currentText, 1f, 0f, fadeOutDuration);
             currentIndex++;
         }
+        SceneManager.LoadScene("Overworld");
     }
 
     private IEnumerator FadeText(TextMeshProUGUI text, float startAlpha, float endAlpha, float duration)
