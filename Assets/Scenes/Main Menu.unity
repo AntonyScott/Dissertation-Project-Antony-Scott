@@ -428,7 +428,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &140789032
 GameObject:
   m_ObjectHideFlags: 0
@@ -10402,7 +10402,7 @@ MonoBehaviour:
   qualityDropdown: {fileID: 2112973399}
   fullscreenToggle: {fileID: 117759220}
   confirmationPrompt: {fileID: 1952351480}
-  _newGameLevel: Level 1
+  _newGameLevel: Overworld
   noSavedGameDialogueBox: {fileID: 960510209}
   resolutionDropdown: {fileID: 1708697989}
 --- !u!4 &1526909758
