@@ -792,7 +792,7 @@ MonoBehaviour:
   - {fileID: 605175386}
   fadeInDuration: 1
   fadeOutDuration: 1
-  delayBetweenTransitions: 5
+  delayBetweenTransitions: 10
 --- !u!1 &758842125
 GameObject:
   m_ObjectHideFlags: 0
