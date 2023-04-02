@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Overworld.unity
     guid: ba651871eca71774c8dfa32e7e6486c9
+  - enabled: 1
+    path: Assets/Scenes/House 1.unity
+    guid: 86fe3c76932d9c548b355c41c4077237
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a1b8642210aee2f4681d0a5b9ad0d37e, type: 2}
