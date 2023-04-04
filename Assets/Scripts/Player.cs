@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -57,6 +56,7 @@ public class Player : MonoBehaviour
         input.Disable();
         input.Player.Movement.performed -= OnMovementPerformed;
         input.Player.Movement.canceled -= OnMovementCancelled;
+        input.Player.Exit.performed -= OnExit;
     }
 
     private void FixedUpdate() //fixed update used for physics calculations such as player movement
