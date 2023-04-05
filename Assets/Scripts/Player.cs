@@ -45,6 +45,10 @@ public class Player : MonoBehaviour
 
     private void OnEnable()
     {
+        if (input == null)
+        {
+            input = new MyGameActions();
+        }
         input.Enable();
         input.Player.Movement.performed += OnMovementPerformed;
         input.Player.Movement.canceled += OnMovementCancelled;
@@ -53,10 +57,13 @@ public class Player : MonoBehaviour
 
     private void OnDisable()
     {
-        input.Disable();
-        input.Player.Movement.performed -= OnMovementPerformed;
-        input.Player.Movement.canceled -= OnMovementCancelled;
-        input.Player.Exit.performed -= OnExit;
+        if (input != null)
+        {
+            input.Disable();
+            input.Player.Movement.performed -= OnMovementPerformed;
+            input.Player.Movement.canceled -= OnMovementCancelled;
+            input.Player.Exit.performed -= OnExit;
+        }
     }
 
     private void FixedUpdate() //fixed update used for physics calculations such as player movement
