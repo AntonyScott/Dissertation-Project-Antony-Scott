@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private MyGameActions input = null; //input system controls
+    private MyGameActions input; //input system controls
 
     [SerializeField] private float moveSpeed = 5f; // Player movement speed
     [SerializeField] private float runSpeed = 10f; // Player running speed
@@ -40,15 +40,11 @@ public class Player : MonoBehaviour
         //initialising variables
         input = new MyGameActions();
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();;
     }
 
     private void OnEnable()
     {
-        if (input == null)
-        {
-            input = new MyGameActions();
-        }
         input.Enable();
         input.Player.Movement.performed += OnMovementPerformed;
         input.Player.Movement.canceled += OnMovementCancelled;
@@ -86,32 +82,67 @@ public class Player : MonoBehaviour
     {
         Vector2 direction = movement.normalized;
 
-        //animations are called through code rather than animator
-        if(direction.x > 0)
+        if (input.Player.Attack.triggered)
         {
-            animator.Play("Player_Run_Right");
-            //Debug.Log("Walking right");
+            Debug.Log("Attack");
+            StartCoroutine(PlayAttackAnimations(direction));
         }
-        else if(direction.x < 0)
+
+        else
         {
-            animator.Play("Player_Run_Left");
-            //Debug.Log("Walking left");
+            //animations are called through code rather than animator
+            if (direction.x > 0)
+            {
+                animator.Play("Player_Run_Right");
+                //Debug.Log("Walking right");
+            }
+            else if (direction.x < 0)
+            {
+                animator.Play("Player_Run_Left");
+                //Debug.Log("Walking left");
+            }
+            else if (direction.y > 0)
+            {
+                animator.Play("Player_Walking_Up");
+                //Debug.Log("Walking up");
+            }
+            else if (direction.y < 0)
+            {
+                animator.Play("Player_Walking_Down");
+                //Debug.Log("Walking down");
+            }
+            else
+            {
+                animator.Play("Player_Idle");
+                //Debug.Log("Idle");
+            }
+        }
+        
+    }
+
+    private IEnumerator PlayAttackAnimations(Vector2 direction)
+    {
+        if (direction.x > 0)
+        {
+            animator.Play("Player_Right_Swing");
+            Debug.Log("Attacking right");
+        }
+        else if (direction.x < 0)
+        {
+            animator.Play("Player_Left_Swing");
+            Debug.Log("Attacking left");
         }
         else if (direction.y > 0)
         {
-            animator.Play("Player_Walking_Up");
-            //Debug.Log("Walking up");
+            animator.Play("Player_Up_Swing");
+            Debug.Log("Attacking up");
         }
         else if (direction.y < 0)
         {
-            animator.Play("Player_Walking_Down");
-            //Debug.Log("Walking down");
+            animator.Play("Player_Down_Swing");
+            Debug.Log("Attacking down");
         }
-        else
-        {
-            animator.Play("Player_Idle");
-            //Debug.Log("Idle");
-        }
+        yield return new WaitForSeconds(2.5f); // wait for 0.5 seconds
     }
 
     private void OnMovementPerformed(InputAction.CallbackContext value) //takes in movement actions which have been performed and passes through to OnEnable()

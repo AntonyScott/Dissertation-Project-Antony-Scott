@@ -13,7 +13,8 @@ public class HouseInsideCollider : MonoBehaviour
     public string houseToLoad;
 
     // Reference to the Cinemachine virtual camera
-   // public CinemachineVirtualCamera virtualCamera;
+    //public CinemachineVirtualCamera virtualCamera;
+    //public GameObject CamBounds;
 
     private bool isInside = false;
 
@@ -30,6 +31,7 @@ public class HouseInsideCollider : MonoBehaviour
         {
             //virtualCamera.gameObject.SetActive(false);
             isInside = true;
+            //CamBounds.SetActive(false);
             SceneManager.LoadScene(houseToLoad);
         }
     }
@@ -41,6 +43,7 @@ public class HouseInsideCollider : MonoBehaviour
         {
             player.transform.position = playerPosition;
             isInside = false;
+            //CamBounds.SetActive(true);
         }
     }
 

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - VirtualCamera
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Sign_Sorting_Layer
+    uniqueID: 1343719831
     locked: 0
   - name: Player_Sorting_Layer
     uniqueID: 3182911221
