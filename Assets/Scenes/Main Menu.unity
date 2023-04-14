@@ -983,19 +983,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2947039531589357025, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_text
-      value: Controls >>
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357025, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_fontSize
-      value: 40.95
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357025, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_fontSizeBase
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357025, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357025, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -1087,7 +1087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357027, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_Name
-      value: Controls_Btn
+      value: Credits_Btn
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -1151,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: VolumeApply
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 2947039531589357031, guid: 9fdac4e7aecf6c645b560d6e772e51ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -11763,7 +11763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4bfaab6241a68934eb6a61bdbdcad19d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a0441c99ff7eb6449ca033b45bd657c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

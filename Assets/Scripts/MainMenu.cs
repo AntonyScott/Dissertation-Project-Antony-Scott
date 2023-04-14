@@ -142,6 +142,11 @@ public class MainMenu : MonoBehaviour
         //StartCoroutine(ConfirmationBox());
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void SetBrightness(float brightness)
     {
         _brightnessLevel= brightness;

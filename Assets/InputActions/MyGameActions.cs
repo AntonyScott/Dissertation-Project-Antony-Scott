@@ -234,6 +234,17 @@ public partial class @MyGameActions : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""a8c7a537-ed4e-4856-88d0-bc42a8ea30b9"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""2fc0ac80-1048-4a08-8a7f-862bac469adc"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
@@ -247,6 +258,17 @@ public partial class @MyGameActions : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""d555ac4a-4b65-44b4-8b81-e379b3de4fc0"",
                     ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e3e611b-1ed3-4cc3-96e7-c546e1c4a205"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -827,6 +849,17 @@ public partial class @MyGameActions : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""cb45498f-a926-43cf-9241-59f8cf27cb83"",
                     ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c0596ca3-98e0-4d52-b4ad-f727852b4f7a"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
