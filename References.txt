@@ -1,2 +1,7 @@
-Knight 16x16 sprite: https://pixelfelix.itch.io/knight-anim-set
-zelda like gfx: https://opengameart.org/content/zelda-like-tilesets-and-sprites
+Art:
+Knight 16x16 sprite - https://pixelfelix.itch.io/knight-anim-set
+zelda like gfx: https - opengameart.org/content/zelda-like-tilesets-and-sprites
+
+Music/SFX:
+Cartoon Mumble Speak - https://freesound.org/people/dersuperanton/sounds/435876/
+One Bard Band by Alexander Nakarada - https://www.chosic.com/download-audio/29651/
