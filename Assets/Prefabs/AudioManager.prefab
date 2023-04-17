@@ -45,15 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: Main Menu Theme
+    clip: {fileID: 8300000, guid: f481fbac658e1df46b6cc0b431aa0b5a, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   - name: Mumble Speak
     clip: {fileID: 8300000, guid: 01ee4ef8c2f35ad4fb2622d35aa3ecd7, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Main Menu Theme
-    clip: {fileID: 8300000, guid: 4f66d3f1a52164c44b6ce37050e1e4b7, type: 3}
-    volume: 1
+  - name: Footsteps
+    clip: {fileID: 8300000, guid: a4b62ddc44446a84c81a146e50f281fd, type: 3}
+    volume: 0.3
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}

@@ -45,6 +45,7 @@ public class DialogueText : MonoBehaviour
                 dialogueBox.SetActive(true);
                 dialogueText.text = dialogue;
                 FindObjectOfType<AudioManager>().Play("Mumble Speak");
+                //FindObjectOfType<AudioManager>().StopPlaying("Main Menu Theme");
             }
         }
     }

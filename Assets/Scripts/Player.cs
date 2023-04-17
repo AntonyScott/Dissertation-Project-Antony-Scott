@@ -148,11 +148,13 @@ public class Player : MonoBehaviour
     private void OnMovementPerformed(InputAction.CallbackContext value) //takes in movement actions which have been performed and passes through to OnEnable()
     {
         movement = value.ReadValue<Vector2>();
+        FindObjectOfType<AudioManager>().Play("Footsteps");
     }
 
     private void OnMovementCancelled(InputAction.CallbackContext value) //takes in movement actions which have been cancelled and passes through to OnDisable()
     {
         movement = Vector2.zero;
+        FindObjectOfType<AudioManager>().StopPlaying("Footsteps");
     }
 
     private void OnExit(InputAction.CallbackContext button)

@@ -1,7 +1,12 @@
 Art:
 Knight 16x16 sprite - https://pixelfelix.itch.io/knight-anim-set
-zelda like gfx: https - opengameart.org/content/zelda-like-tilesets-and-sprites
+zelda like gfx - https://opengameart.org/content/zelda-like-tilesets-and-sprites
+5 wood textures = https://opengameart.org/content/5-wood-textures
 
-Music/SFX:
-Cartoon Mumble Speak - https://freesound.org/people/dersuperanton/sounds/435876/
+Music:
 One Bard Band by Alexander Nakarada - https://www.chosic.com/download-audio/29651/
+Now We Ride by Alexander Nakareda - https://www.chosic.com/download-audio/29657/
+
+SFX:
+Cartoon Mumble Speak - https://freesound.org/people/dersuperanton/sounds/435876/
+Footsteps - https://opengameart.org/content/footsteps-0

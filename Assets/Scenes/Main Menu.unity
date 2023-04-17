@@ -6118,7 +6118,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -13974,12 +13974,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4623680600841515504, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4623680600841515504, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 0.5
+      propertyPath: sounds.Array.data[2].loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4623680600841515505, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
       propertyPath: m_Name
