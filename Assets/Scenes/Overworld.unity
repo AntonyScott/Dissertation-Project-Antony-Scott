@@ -30539,7 +30539,7 @@ PrefabInstance:
     - target: {fileID: 3737355650739740101, guid: b2236e2491c050a41b53cae71d7ac8e0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c764229c36005d344bfe8ccb65c8227e, type: 3}
+      objectReference: {fileID: 21300000, guid: f1343f79ee2fc9046a4719bd2214d30a, type: 3}
     - target: {fileID: 3737355650739740101, guid: b2236e2491c050a41b53cae71d7ac8e0, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -30646,11 +30646,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3737355651527723257, guid: b2236e2491c050a41b53cae71d7ac8e0, type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3737355651527723257, guid: b2236e2491c050a41b53cae71d7ac8e0, type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3737355651527723257, guid: b2236e2491c050a41b53cae71d7ac8e0, type: 3}
       propertyPath: m_enableAutoSizing
