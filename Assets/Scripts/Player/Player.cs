@@ -8,10 +8,10 @@ public class Player : MonoBehaviour
     private MyGameActions input; //input system controls
 
     [SerializeField] private float moveSpeed = 5f; // Player movement speed
-    [SerializeField] private float runSpeed = 10f; // Player running speed
+    /*[SerializeField] private float runSpeed = 10f; // Player running speed
     [SerializeField] private float dashDistance = 5f; // Player dash distance
     [SerializeField] private float dashDuration = 0.2f; // Player dash duration
-    [SerializeField] private float dashCooldown = 1f; // Player dash cooldown
+    [SerializeField] private float dashCooldown = 1f; // Player dash cooldown*/
 
     //rigidbody and moveVector variables
     private Rigidbody2D rb = null;
@@ -19,9 +19,9 @@ public class Player : MonoBehaviour
     private Animator animator;
 
     //movement bool variables
-    private bool isRunning = false;
+    /*private bool isRunning = false;*/
     private bool isDashing = false;
-    private bool canDash = false;
+    /*private bool canDash = false;*/
 
     private void Awake()
     {
