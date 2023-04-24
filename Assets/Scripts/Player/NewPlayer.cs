@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/*public enum PlayerState
+{
+    walking,
+    attacking,
+    interacting,
+    idle
+}*/
+
 public class NewPlayer : MonoBehaviour
 {
     public float moveSpeed;
@@ -46,10 +54,12 @@ public class NewPlayer : MonoBehaviour
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
             animator.SetBool("isMoving", true);
+            FindObjectOfType<AudioManager>().Play("Footsteps");
         }
         else
         {
             animator.SetBool("isMoving", false);
+            FindObjectOfType<AudioManager>().StopPlaying("Footsteps");
         }
     }
 
