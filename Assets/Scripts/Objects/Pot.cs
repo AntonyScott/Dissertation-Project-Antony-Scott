@@ -18,8 +18,15 @@ public class Pot : MonoBehaviour
         
     }
 
-    public void Destroy() 
+    public void Smash() 
     {
         animator.SetBool("hit", true);
+        StartCoroutine(Disintegrate());
+    }
+
+    public IEnumerator Disintegrate()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject);
     }
 }

@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     private Vector2 change;
 
-    //
+    //classes are declared
     private Rigidbody2D rb = null;
     private Animator animator;
     private MyGameActions input;
@@ -25,9 +25,12 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        input = new MyGameActions();
-        
+        input = new MyGameActions(); //input is instantiated as game actions bindings
+        rb = GetComponent<Rigidbody2D>(); //grabs rigidbody on player
+        animator = GetComponent<Animator>(); //grabs animator 
 
+        //the code below attempts to find multiple game objects with the tag "Player"
+        //it then destroys all but the current player gameobject, which is loaded into the DontDestroyOnLoad(gameObject)
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length > 1)
         {
@@ -37,19 +40,18 @@ public class Player : MonoBehaviour
             }
         }
         DontDestroyOnLoad(gameObject);
-
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context)
     {
         change = context.ReadValue<Vector2>() * moveSpeed;
+        FindObjectOfType<AudioManager>().Play("Footsteps");
     }
 
     private void OnMoveCanceled(InputAction.CallbackContext context)
     {
         change = Vector2.zero;
+        FindObjectOfType<AudioManager>().StopPlaying("Footsteps");
     }
 
     private void OnAttackPerformed(InputAction.CallbackContext context)
@@ -89,6 +91,8 @@ public class Player : MonoBehaviour
         if(playerState == PlayerState.attacking)
         {
             animator.SetBool("isAttacking", true);
+            FindObjectOfType<AudioManager>().Play("Sword Swing");
+
         }
         else
         {
@@ -98,6 +102,7 @@ public class Player : MonoBehaviour
 
     void Movement()
     {
+        change.Normalize();
         rb.MovePosition(rb.position + change.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 

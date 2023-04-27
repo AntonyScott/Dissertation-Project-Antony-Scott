@@ -61,5 +61,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a4b62ddc44446a84c81a146e50f281fd, type: 3}
     volume: 0.3
     pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Sword Swing
+    clip: {fileID: 8300000, guid: 87e2452fe2c754248926c9a9ab93a467, type: 3}
+    volume: 0.3
+    pitch: 1
     loop: 0
     source: {fileID: 0}
