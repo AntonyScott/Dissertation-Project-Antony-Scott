@@ -64,7 +64,13 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Sword Swing
-    clip: {fileID: 8300000, guid: 87e2452fe2c754248926c9a9ab93a467, type: 3}
+    clip: {fileID: 8300000, guid: 2ebf2421dddc15a45b7fc6ae8197b1c0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy Grunt
+    clip: {fileID: 8300000, guid: 2b6e306f144fd2047ad36490140f8b85, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
