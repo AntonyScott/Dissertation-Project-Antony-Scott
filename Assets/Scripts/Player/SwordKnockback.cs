@@ -10,18 +10,19 @@ public class SwordKnockback : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && this.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
             if (enemy != null)
             {
                 enemy.GetComponent<EnemyPathfinding>().currentEnemyState = EnemyStates.stagger;
                 StartCoroutine(KnockCoroutine(enemy));
+                Debug.Log("Enemy Hit!");
                 FindObjectOfType<AudioManager>().Play("Enemy Grunt");
             }
         }
 
-        if (collision.CompareTag("Break") && this.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Break"))
         {
             collision.GetComponent<Pot>().Smash();
         }

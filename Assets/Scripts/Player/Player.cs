@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public enum PlayerState
 {
@@ -133,7 +134,9 @@ public class Player : MonoBehaviour
 
     private void OnExit(InputAction.CallbackContext context)
     {
-        Debug.Log("Quit");
-        Application.Quit();
+        /*Debug.Log("Quit");
+        Application.Quit();*/
+        SceneManager.LoadScene("Main Menu");
+        Destroy(gameObject);
     }
 }
