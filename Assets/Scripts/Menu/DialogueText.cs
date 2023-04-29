@@ -10,7 +10,9 @@ public class DialogueText : MonoBehaviour
 {
     public GameObject dialogueBox;
     public TMP_Text dialogueText;
+    public TMP_Text npcNameText;
     public string dialogue;
+    public string npcName;
     public bool playerInRange;
 
     private MyGameActions input;
@@ -44,6 +46,7 @@ public class DialogueText : MonoBehaviour
             {
                 dialogueBox.SetActive(true);
                 dialogueText.text = dialogue;
+                npcNameText.text = npcName;
                 FindObjectOfType<AudioManager>().Play("Mumble Speak");
                 //FindObjectOfType<AudioManager>().StopPlaying("Main Menu Theme");
             }

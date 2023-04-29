@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
         input.Player.Movement.canceled += OnMoveCanceled;
         input.Player.Attack.performed += OnAttackPerformed;
         input.Player.Attack.canceled += OnAttackCanceled;
-        input.Player.Exit.performed += OnExit;
+        //input.Player.Exit.performed += OnExit;
     }
 
     private void OnDisable()
@@ -132,11 +132,11 @@ public class Player : MonoBehaviour
         input.Player.Attack.canceled -= OnAttackCanceled;
     }
 
-    private void OnExit(InputAction.CallbackContext context)
+    /*private void OnExit(InputAction.CallbackContext context)
     {
-        /*Debug.Log("Quit");
-        Application.Quit();*/
+        *//*Debug.Log("Quit");
+        Application.Quit();*//*
         SceneManager.LoadScene("Main Menu");
         Destroy(gameObject);
-    }
+    }*/
 }
