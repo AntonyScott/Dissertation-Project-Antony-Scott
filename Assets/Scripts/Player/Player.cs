@@ -74,7 +74,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (change != Vector2.zero)

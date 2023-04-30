@@ -8,6 +8,7 @@ TagManager:
   - Walls
   - Break
   - Enemy
+  - UI
   layers:
   - Default
   - TransparentFX

@@ -10,11 +10,14 @@ public class PauseMenu : MonoBehaviour
     public static bool GamePaused = false;
     public GameObject pauseMenuUI;
 
+    public bool loadMenuCalled = false;
+
     // Update is called once per frame
     void Awake()
     {
         controls = new MyGameActions();
         controls.UI.Pause.performed += _ => TogglePause();
+        //DontDestroyOnLoad(gameObject);
     }
 
     void OnEnable()
@@ -39,46 +42,59 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        FindObjectOfType<AudioManager>().ResumeAll();
         GamePaused = false;
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        FindObjectOfType<AudioManager>().PauseAll();
         GamePaused = true;
     }
-}
 
-/*private void OnEnable()
+    public void LoadMenu()
     {
-        input.Enable();
-        input.UI.Pause.performed += OnPausePerformed;
-        input.UI.Pause.canceled += OnPauseCanceled;
-    }
+        Debug.Log("Load menu");
+        Time.timeScale = 1f;
 
-    private void OnDisable()
-    {
-        input.Disable();
-        input.UI.Pause.performed -= OnPausePerformed;
-        input.UI.Pause.canceled -= OnPauseCanceled;
-    }
-
-    private void OnPausePerformed(InputAction.CallbackContext context)
-    {
-        Debug.Log("Pause Game");
-        PauseGame();
-    }
-
-    private void OnPauseCanceled(InputAction.CallbackContext context)
-    {
-        if (GamePaused && pauseMenuUI.activeInHierarchy)
+        // Find the canvas object and destroy it
+        GameObject canvasObject = GameObject.FindGameObjectWithTag("UI");
+        if (canvasObject != null)
         {
-            Debug.Log("Resume Game");
-            ResumeGame();
+            Destroy(canvasObject);
         }
-    }*/
+
+        // Find the player object and destroy it
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            Destroy(playerObject);
+        }
+
+        // Load the Main Menu scene
+        SceneManager.LoadScene("Main Menu");
+
+        // Set the loadMenuCalled variable to true
+        loadMenuCalled = true;
+
+        // Destroy the Pause Menu object
+        Destroy(gameObject);
+    }
+
+    public bool GetLoadMenuCalled()
+    {
+        return loadMenuCalled;
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit game!");
+        Application.Quit();
+    }
+}
