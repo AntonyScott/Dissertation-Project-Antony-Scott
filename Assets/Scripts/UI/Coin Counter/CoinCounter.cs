@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class CoinConter : MonoBehaviour
+public class CoinCounter : MonoBehaviour
 {
     private TMP_Text coinCounterText;
 

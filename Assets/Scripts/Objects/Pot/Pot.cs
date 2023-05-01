@@ -6,6 +6,8 @@ public class Pot : MonoBehaviour
 {
     private Animator animator;
 
+    public GameObject coin;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,11 +24,13 @@ public class Pot : MonoBehaviour
     {
         animator.SetBool("hit", true);
         StartCoroutine(Disintegrate());
+        
     }
 
     public IEnumerator Disintegrate()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+        Instantiate(coin, transform.position, Quaternion.identity);
     }
 }

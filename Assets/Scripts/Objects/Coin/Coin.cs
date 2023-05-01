@@ -13,28 +13,24 @@ public class Coin : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Start()
-    {
-        totalCoins = 0;
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             //increments new coin to the coin counter
             totalCoins++;
-            //prints out total number of coins collected by the player
+            //prints out total number of coins collected by the player to the debug console
             Debug.Log("You currently have " + totalCoins + " Coins.");
-            //destroys coin game object
+            //plays coin pickup animation then destroys gameobject
             StartCoroutine(CoinPickup());
-            //Destroy(gameObject);
         }
     }
 
     private IEnumerator CoinPickup()
     {
+        //plays pickup animation, waits for half a second then destroys gameobject
         animator.Play("Pick-Up_Anim");
+        FindObjectOfType<AudioManager>().Play("Coin");
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }

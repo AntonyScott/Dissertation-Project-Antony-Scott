@@ -83,6 +83,7 @@ public class MainMenu : MonoBehaviour
     public void NewGameDialogueYesBtn()
     {
         SceneManager.LoadScene(_newGameLevel);
+        Coin.totalCoins = 0; //reset coins to 0 when loading new game
     }
 
     public void LoadGameDialogueYesBtn()
