@@ -51,7 +51,7 @@ public class TextIntroduction : MonoBehaviour
             float timer = 0f;
             while (timer < delayBetweenTransitions)
             {
-                if (Keyboard.current.spaceKey.wasPressedThisFrame)
+                if (Keyboard.current.spaceKey.wasPressedThisFrame || Mouse.current.clickCount.IsPressed())
                 {
                     // Load the next scene
                     SceneManager.LoadScene("Overworld");
