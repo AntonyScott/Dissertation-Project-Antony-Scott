@@ -2,6 +2,7 @@ Art:
 Knight 16x16 sprite - https://pixelfelix.itch.io/knight-anim-set
 zelda like gfx - https://opengameart.org/content/zelda-like-tilesets-and-sprites
 5 wood textures = https://opengameart.org/content/5-wood-textures
+Coin sprite - https://opengameart.org/content/16x16-spinning-coin-pickup-animation
 
 Music:
 One Bard Band by Alexander Nakarada - https://www.chosic.com/download-audio/29651/
