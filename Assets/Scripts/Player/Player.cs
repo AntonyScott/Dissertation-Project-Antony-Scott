@@ -23,12 +23,13 @@ public class Player : MonoBehaviour
     private MyGameActions input;
     private PlayerState playerState;
 
+    public VectorValue playerStartPosition;
+
     // Start is called before the first frame update
     private void Awake()
     {
         input = new MyGameActions(); //input is instantiated as game actions bindings
-        rb = GetComponent<Rigidbody2D>(); //grabs rigidbody on player
-        animator = GetComponent<Animator>(); //grabs animator 
+        
 
         //the code below attempts to find multiple game objects with the tag "Player"
         //it then destroys all but the current player gameobject, which is loaded into the DontDestroyOnLoad(gameObject)
@@ -40,7 +41,15 @@ public class Player : MonoBehaviour
                 Destroy(players[i]);
             }
         }
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); //makes sure the player is not destroyed when entering a new scene
+    }
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>(); // Grabs rigidbody on player
+        animator = GetComponent<Animator>(); // Grabs animator 
+
+        //transform.position = playerStartPosition.initValue;
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context)
@@ -67,7 +76,7 @@ public class Player : MonoBehaviour
 
     private void OnAttackCanceled(InputAction.CallbackContext context)
     {
-        if(playerState == PlayerState.attacking)
+        if (playerState == PlayerState.attacking)
         {
             playerState = PlayerState.idle;
             StartCoroutine(AttackCo());
@@ -88,7 +97,7 @@ public class Player : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
 
-        if(playerState == PlayerState.attacking)
+        if (playerState == PlayerState.attacking)
         {
             animator.SetBool("isAttacking", true);
             FindObjectOfType<AudioManager>().Play("Sword Swing");
@@ -119,7 +128,6 @@ public class Player : MonoBehaviour
         input.Player.Movement.canceled += OnMoveCanceled;
         input.Player.Attack.performed += OnAttackPerformed;
         input.Player.Attack.canceled += OnAttackCanceled;
-        //input.Player.Exit.performed += OnExit;
     }
 
     private void OnDisable()
@@ -130,12 +138,4 @@ public class Player : MonoBehaviour
         input.Player.Attack.performed -= OnAttackPerformed;
         input.Player.Attack.canceled -= OnAttackCanceled;
     }
-
-    /*private void OnExit(InputAction.CallbackContext context)
-    {
-        *//*Debug.Log("Quit");
-        Application.Quit();*//*
-        SceneManager.LoadScene("Main Menu");
-        Destroy(gameObject);
-    }*/
 }

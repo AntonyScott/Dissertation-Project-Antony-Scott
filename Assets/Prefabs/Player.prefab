@@ -1124,6 +1124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  playerStartPosition: {fileID: 11400000, guid: fe5235ff9ece4ac4c825e7455712e762, type: 2}
+  playerVector: {fileID: 11400000, guid: 15f188c38e968ae47b00680f881ea36e, type: 2}
 --- !u!114 &470837329
 MonoBehaviour:
   m_ObjectHideFlags: 0
