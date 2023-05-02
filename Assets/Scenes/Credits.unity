@@ -181,7 +181,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Music:
+
+    One Bard Band by Alexander Nakarada - https://www.chosic.com/download-audio/29651/
+
+
+    Now
+    We Ride by Alexander Nakareda - https://www.chosic.com/download-audio/29657/
+
+
+    Prepare
+    For War by Alexander Nakareda - https://www.chosic.com/download-audio/29659/
+
+
+    Music
+    sourced via chosic.com
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -208,7 +224,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -647,7 +663,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'SFX:
+
+    Cartoon Mumble Speak - https://freesound.org/people/dersuperanton/sounds/435876/
+
+    
+
+    Footsteps
+    - https://opengameart.org/content/footsteps-0
+
+    
+
+    Enemy Grunt, Sword
+    Swing and Coin sounds - https://assetstore.unity.com/packages/2d/free-2d-mega-pack-177430
+
+    
+
+    Sourced
+    via freesound.com, opengameart.org and the Unity Asset Store.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -674,7 +707,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -945,23 +978,39 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Script Writer
+  m_text: 'Programmer/Script Writer:
 
-    Antony Scott
+    Antony Scott - 25295522
 
 
-    Animations/Graphics
+    Animations/Graphics:
+
+    Knight
+    16x16 sprite - https://pixelfelix.itch.io/knight-anim-set
+
+    
+
+    Zelda
+    like gfx - https://opengameart.org/content/zelda-like-tilesets-and-sprites
+
+    
+
+    Wood
+    sign texture - https://www.vecteezy.com/vector-art/8826392-wood-texture-seamless-repeat-print
+
+    
+
+    Pixel
+    hearts - https://opengameart.org/content/pixel-hearts
+
+
+    Coin sprite - https://opengameart.org/content/16x16-spinning-coin-pickup-animation
+
+    
+
 
     Sourced
-    by opengameart.org
-
-
-    Music/SFX
-
-    SFX sourced via BFXR and freesound.org
-
-    Music
-    sourced via chosic.com'
+    by opengameart.org,  itch.io and vecteezy.com'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

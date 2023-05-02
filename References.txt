@@ -1,13 +1,42 @@
 Art:
 Knight 16x16 sprite - https://pixelfelix.itch.io/knight-anim-set
+
 zelda like gfx - https://opengameart.org/content/zelda-like-tilesets-and-sprites
-5 wood textures = https://opengameart.org/content/5-wood-textures
+
+5 wood textures - https://www.vecteezy.com/vector-art/8826392-wood-texture-seamless-repeat-print
+
 Coin sprite - https://opengameart.org/content/16x16-spinning-coin-pickup-animation
+
+Pixel hearts - https://opengameart.org/content/pixel-hearts
 
 Music:
 One Bard Band by Alexander Nakarada - https://www.chosic.com/download-audio/29651/
+
 Now We Ride by Alexander Nakareda - https://www.chosic.com/download-audio/29657/
+
+Prepare For War by Alexander Nakareda - https://www.chosic.com/download-audio/29659/
+
+Music sourced by chosic.com
 
 SFX:
 Cartoon Mumble Speak - https://freesound.org/people/dersuperanton/sounds/435876/
+
 Footsteps - https://opengameart.org/content/footsteps-0
+
+Enemy Grunt, Sword Swing and Coin sounds - https://assetstore.unity.com/packages/2d/free-2d-mega-pack-177430
+
+Sourced via freesound.com, opengameart.org and the Unity Asset Store.
+
+
+Unity packages used:
+Cinemachine
+New Unity Input System
+TextMeshPro
+Universal Render Pipeline
+
+Software used:
+Unity 2021.3.9f1
+Visual Studio 2022
+C# and Monobehaviour
+Unity Asset Store
+Itch.io

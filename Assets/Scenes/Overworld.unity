@@ -20626,7 +20626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1f1872f3d0cf84ebc9455c455d654f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonToLoad: 
+  dungeonToLoad: Dungeon 2
 --- !u!4 &874657573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1648289285259707081, guid: e940df0b1e9c05e45bf40219584dfad8, type: 3}
@@ -25773,8 +25773,6 @@ CompositeCollider2D:
         Y: 142500087
       - X: -241875099
         Y: 142500049
-      - X: -242031355
-        Y: 141875015
       - X: -242500078
         Y: 140000100
       - X: -243750021
@@ -25995,6 +25993,34 @@ CompositeCollider2D:
         Y: 102499900
       - X: -108124984
         Y: 102499900
+    - - X: 57500047
+        Y: 82499910
+      - X: 60000079
+        Y: 84374934
+      - X: 60000100
+        Y: 84374976
+      - X: 60000100
+        Y: 116250041
+      - X: 60000041
+        Y: 116250100
+      - X: 53749988
+        Y: 116250100
+      - X: 53749966
+        Y: 116250095
+      - X: 49999930
+        Y: 114375077
+      - X: 49999900
+        Y: 114375028
+      - X: 49999900
+        Y: 83749988
+      - X: 49999905
+        Y: 83749966
+      - X: 50624923
+        Y: 82499930
+      - X: 50624972
+        Y: 82499900
+      - X: 57500016
+        Y: 82499900
     - - X: 8125024
         Y: 82499903
       - X: 10000062
@@ -26036,34 +26062,6 @@ CompositeCollider2D:
       - X: 1874980
         Y: 82499900
       - X: 8125008
-        Y: 82499900
-    - - X: 57500047
-        Y: 82499910
-      - X: 60000079
-        Y: 84374934
-      - X: 60000100
-        Y: 84374976
-      - X: 60000100
-        Y: 116250041
-      - X: 60000041
-        Y: 116250100
-      - X: 53749988
-        Y: 116250100
-      - X: 53749966
-        Y: 116250095
-      - X: 49999930
-        Y: 114375077
-      - X: 49999900
-        Y: 114375028
-      - X: 49999900
-        Y: 83749988
-      - X: 49999905
-        Y: 83749966
-      - X: 50624923
-        Y: 82499930
-      - X: 50624972
-        Y: 82499900
-      - X: 57500016
         Y: 82499900
     - - X: -203124945
         Y: 69999910
@@ -26915,8 +26913,8 @@ CompositeCollider2D:
         Y: -60000003
       - X: 266875147
         Y: -59999900
-      - X: 267246755
-        Y: -58885077
+      - X: 267276497
+        Y: -58795850
       - X: 267291780
         Y: -58750000
       - X: 269375105
@@ -32307,7 +32305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1f1872f3d0cf84ebc9455c455d654f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonToLoad: 
+  dungeonToLoad: Dungeon 3
 --- !u!1 &1852644397
 GameObject:
   m_ObjectHideFlags: 0
@@ -32928,7 +32926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1f1872f3d0cf84ebc9455c455d654f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonToLoad: 
+  dungeonToLoad: Dungeon 4
 --- !u!1 &2079864282
 GameObject:
   m_ObjectHideFlags: 0
@@ -33280,6 +33278,14 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1766615756}
+    - target: {fileID: 1003455849, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
+      propertyPath: health
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003455849, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
+      propertyPath: numberOfHearts
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2876187633181477416, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
       propertyPath: moveSpeed
       value: 10

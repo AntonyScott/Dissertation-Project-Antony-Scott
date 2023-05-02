@@ -3,16 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sounds;
-
+    public Sound[] sounds; //array of sounds (mp3's etc)
     public static AudioManager instance;
+
+    private bool isFadingOut = false;
 
     // Start is called before the first frame update
     void Awake()
     {
+        //destroys any other instance of audiomanager which may be present in other scenes
         if (instance == null)
         {
             instance = this;
@@ -22,10 +25,11 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); //makes sure the audiomanager is not destroyed when transitioning between scenes
 
         foreach (Sound s in sounds)
         {
+            //assigns audiosource, audioclip, volume, pitch and loop functions for each sound in the array
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
@@ -35,6 +39,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //starts playing sound
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -54,6 +59,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //stops playing sound
     public void StopPlaying(string sound)
     {
         Sound s = Array.Find(sounds, item => item.name == sound);
@@ -66,6 +72,7 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
+    //pause function (used when activating pause menu)
     public void PauseAll()
     {
         foreach (Sound s in sounds)
@@ -77,6 +84,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //resume function (used when de-activating pause menu)
     public void ResumeAll()
     {
         foreach (Sound s in sounds)
@@ -88,8 +96,28 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    void Start()
+    void Update()
     {
-        Play("Main Menu Theme");
+        MusicSceneTransitions();
     }
+
+    //transitions background music between dungeon and overworld scenes
+    void MusicSceneTransitions()
+    {
+        //Debug.Log("Audio manager update method called!");
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (sceneName.StartsWith("Dungeon"))
+        {
+            StopPlaying("Main Menu Theme");
+            Play("Dungeon Theme");
+        }
+        else if (sceneName == "Main Menu" || sceneName == "Overworld" || sceneName == "Credits")
+        {
+            StopPlaying("Dungeon Theme");
+            Play("Main Menu Theme");
+        }
+    }
+
 }

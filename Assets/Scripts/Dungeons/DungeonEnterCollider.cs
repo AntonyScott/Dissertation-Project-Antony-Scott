@@ -26,6 +26,7 @@ public class DungeonEnterCollider : MonoBehaviour
         {
             isInside = true;
             SceneManager.LoadScene(dungeonToLoad);
+            player.transform.position = Vector2.zero;
         }
     }
 
