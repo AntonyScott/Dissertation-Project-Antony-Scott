@@ -77,6 +77,9 @@ public class PauseMenu : MonoBehaviour
             Destroy(playerObject);
         }
 
+        string activeScene = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("LevelSaved", activeScene);
+
         // Load the Main Menu scene
         SceneManager.LoadScene("Main Menu");
 

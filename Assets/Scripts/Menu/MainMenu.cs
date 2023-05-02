@@ -88,9 +88,9 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGameDialogueYesBtn()
     {
-        if (PlayerPrefs.HasKey("SavedLevel"))
+        if (PlayerPrefs.HasKey("LevelSaved"))
         {
-            levelToLoad = PlayerPrefs.GetString("SavedLevel");
+            levelToLoad = PlayerPrefs.GetString("LevelSaved");
             SceneManager.LoadScene(levelToLoad);
         }
         else

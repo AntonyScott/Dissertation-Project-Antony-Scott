@@ -104,7 +104,6 @@ public class AudioManager : MonoBehaviour
     //transitions background music between dungeon and overworld scenes
     void MusicSceneTransitions()
     {
-        //Debug.Log("Audio manager update method called!");
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 

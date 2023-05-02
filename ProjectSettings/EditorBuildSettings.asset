@@ -15,12 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Overworld.unity
     guid: ba651871eca71774c8dfa32e7e6486c9
   - enabled: 1
-    path: Assets/Scenes/House 1.unity
-    guid: 86fe3c76932d9c548b355c41c4077237
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 6aeb0eb977b429d45a27da261db32787
-  - enabled: 1
     path: Assets/Scenes/Dungeon 1.unity
     guid: 59d700095aa7f4b4cbefb78cbfa127ff
   - enabled: 1
@@ -32,5 +26,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon 4.unity
     guid: dd28435c26eda3d4ea8f74c55374963f
+  - enabled: 1
+    path: Assets/Scenes/House 1.unity
+    guid: 86fe3c76932d9c548b355c41c4077237
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 6aeb0eb977b429d45a27da261db32787
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a1b8642210aee2f4681d0a5b9ad0d37e, type: 2}
