@@ -10,6 +10,13 @@ public class CoinCounter : MonoBehaviour
     private void Start()
     {
         coinCounterText = GetComponent<TMP_Text>();
+
+        // Load the saved coin count
+        if (PlayerPrefs.HasKey("CoinCount"))
+        {
+            int coinCount = PlayerPrefs.GetInt("CoinCount");
+            Coin.totalCoins = coinCount;
+        }
     }
 
     private void Update()
@@ -18,5 +25,11 @@ public class CoinCounter : MonoBehaviour
         {
             coinCounterText.text = Coin.totalCoins.ToString();
         }
+    }
+
+    private void OnDestroy()
+    {
+        // Save the coin count when the scene is unloaded
+        PlayerPrefs.SetInt("CoinCount", Coin.totalCoins);
     }
 }
