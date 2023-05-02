@@ -97,6 +97,9 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        string activeScene = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("LevelSaved", activeScene);
+
         Debug.Log("Quit game!");
         Application.Quit();
     }
