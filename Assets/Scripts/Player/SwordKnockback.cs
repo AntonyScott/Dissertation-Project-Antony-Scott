@@ -26,6 +26,20 @@ public class SwordKnockback : MonoBehaviour
         {
             collision.GetComponent<Pot>().Smash();
         }
+
+        if (collision.CompareTag("Snake Enemy"))
+        {
+            Rigidbody2D snake = collision.GetComponent<Rigidbody2D>();
+
+            if (snake != null)
+            {
+                snake.GetComponent<EnemyPathfinding>().currentEnemyState = EnemyStates.stagger;
+                StartCoroutine(KnockCoroutine(snake));
+                collision.GetComponent<Snake>().HitBySword();
+                //Debug.Log("Enemy Hit!");
+                FindObjectOfType<AudioManager>().Play("Hiss");
+            }
+        }
     }
 
     private IEnumerator KnockCoroutine(Rigidbody2D enemy)

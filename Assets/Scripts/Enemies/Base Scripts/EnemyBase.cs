@@ -11,7 +11,7 @@ public enum EnemyStates{
 
 public class EnemyBase : MonoBehaviour
 {
-    public int healthPoints;
+    public int healthPoints = 1;
     public string enemyName;
     public int baseAttack;
     public float moveSpeed = 10f;

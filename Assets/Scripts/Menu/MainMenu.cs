@@ -83,8 +83,23 @@ public class MainMenu : MonoBehaviour
     public void NewGameDialogueYesBtn()
     {
         SceneManager.LoadScene(_newGameLevel);
+        ResetCoinValues();
+        ResetEnemyValues();
+    }
+
+    void ResetCoinValues()
+    {
         Coin.totalCoins = 0; //reset coins to 0 when loading new game
         PlayerPrefs.SetInt("CoinCount", 0);
+    }
+
+    void ResetEnemyValues()
+    {
+        Snake.totalSnakeKills = 0;
+        PlayerPrefs.SetInt("SnakeKillCount", 0);
+
+        TreeEnemy.totalTreeEnemyKills = 0;
+        PlayerPrefs.SetInt("TreeEnemyKillCount", 0);
     }
 
     public void LoadGameDialogueYesBtn()

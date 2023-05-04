@@ -7,6 +7,7 @@ public class Pot : MonoBehaviour
     private Animator animator;
 
     public GameObject coin;
+    //public GameObject snake;
 
     // Start is called before the first frame update
     void Awake()

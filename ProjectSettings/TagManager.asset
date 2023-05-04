@@ -9,6 +9,8 @@ TagManager:
   - Break
   - Enemy
   - UI
+  - Snake Enemy
+  - Tree Enemy
   layers:
   - Default
   - TransparentFX
