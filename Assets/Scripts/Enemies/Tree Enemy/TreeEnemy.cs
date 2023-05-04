@@ -6,10 +6,12 @@ public class TreeEnemy : MonoBehaviour
 {
     public static int totalTreeEnemyKills = 0;
     public Animator animator;
+    private Rigidbody2D rb;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void HitBySword()
@@ -20,6 +22,8 @@ public class TreeEnemy : MonoBehaviour
 
     public IEnumerator TreeDeath()
     {
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         yield return new WaitForSeconds(1.2f);
         Destroy(gameObject);
     }
