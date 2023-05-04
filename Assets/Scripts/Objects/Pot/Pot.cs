@@ -7,7 +7,7 @@ public class Pot : MonoBehaviour
     private Animator animator;
 
     public GameObject coin;
-    //public GameObject snake;
+    public GameObject snake;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,6 +32,17 @@ public class Pot : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
-        Instantiate(coin, transform.position, Quaternion.identity);
+
+        float randomNumber = Random.value;
+
+        if(randomNumber <= 0.6f)
+        {
+            Instantiate(coin, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(snake, transform.position, Quaternion.identity);
+        }
+        
     }
 }

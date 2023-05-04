@@ -80,6 +80,10 @@ public class PauseMenu : MonoBehaviour
         string activeScene = SceneManager.GetActiveScene().name;
         PlayerPrefs.SetString("LevelSaved", activeScene);
 
+        PlayerPrefs.SetInt("TreeEnemyKillCount", TreeEnemy.totalTreeEnemyKills);
+
+        PlayerPrefs.SetInt("SnakeKillCount", Snake.totalSnakeKills);
+
         // Load the Main Menu scene
         SceneManager.LoadScene("Main Menu");
 
