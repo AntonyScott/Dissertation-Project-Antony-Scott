@@ -11,6 +11,7 @@ TagManager:
   - UI
   - Snake Enemy
   - Tree Enemy
+  - Break_Chance
   layers:
   - Default
   - TransparentFX

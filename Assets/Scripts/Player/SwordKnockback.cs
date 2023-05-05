@@ -27,6 +27,11 @@ public class SwordKnockback : MonoBehaviour
             collision.GetComponent<Pot>().Smash();
         }
 
+        if (collision.CompareTag("Break_Chance"))
+        {
+            collision.GetComponent<Pot_Chance>().Smash();
+        }
+
         if (collision.CompareTag("Snake Enemy"))
         {
             Rigidbody2D snake = collision.GetComponent<Rigidbody2D>();

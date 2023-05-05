@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 1648289285259707081}
   - component: {fileID: 1648289285259707094}
   - component: {fileID: 1648289285259707080}
+  - component: {fileID: 1648289285259707083}
   - component: {fileID: -470474631349076381}
-  - component: {fileID: 4230693642742941690}
   m_Layer: 0
-  m_Name: Pot
-  m_TagString: Break
+  m_Name: Pot_Chance
+  m_TagString: Break_Chance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +107,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1648289285259707083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648289285259707092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb03dd8030b28b4f879bcde77f79e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 6389833354024017365, guid: a54fc879d898d99438b6fd2c40aa63ac, type: 3}
+  snake: {fileID: 8054524762129483736, guid: c871fd69602a61749829a5b19bd45a47, type: 3}
 --- !u!61 &-470474631349076381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -133,16 +147,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7829547, y: 0.8439684}
   m_EdgeRadius: 0
---- !u!114 &4230693642742941690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648289285259707092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d7fd4da21227a543a91b5ad224f91ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin: {fileID: 6389833354024017365, guid: a54fc879d898d99438b6fd2c40aa63ac, type: 3}
