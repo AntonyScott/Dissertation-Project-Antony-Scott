@@ -8,6 +8,8 @@ public class Snake : MonoBehaviour
     public Animator animator;
     private Rigidbody2D rb;
 
+    public GameObject coin;
+
     void Awake()
     {
         //GetComponent<Collider2D>().isTrigger = true;
@@ -19,6 +21,7 @@ public class Snake : MonoBehaviour
     {
         animator.SetBool("hit", true);
         StartCoroutine(SnakeDeath());
+        GetComponent<Collider2D>().enabled = false;
     }
 
     public IEnumerator SnakeDeath()
@@ -26,7 +29,18 @@ public class Snake : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         yield return new WaitForSeconds(1.2f);
+
+        float randomNumber = Random.value;
+
+        if (randomNumber <= 0.2f)
+        {
+            Instantiate(coin, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
+
+        // Save the updated totalSnakeKills value to PlayerPrefs
+        PlayerPrefs.SetInt("SnakeKillCount", totalSnakeKills);
+        PlayerPrefs.Save();
     }
 
     void OnCollisionEnter2D(Collision2D collision)

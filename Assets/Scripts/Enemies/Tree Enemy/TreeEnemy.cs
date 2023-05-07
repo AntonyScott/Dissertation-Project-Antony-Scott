@@ -8,6 +8,10 @@ public class TreeEnemy : MonoBehaviour
     public Animator animator;
     private Rigidbody2D rb;
 
+    public GameObject heart;
+
+    private int attackCollisions = 0;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -25,6 +29,14 @@ public class TreeEnemy : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         yield return new WaitForSeconds(1.2f);
+
+        float randomNumber = Random.value;
+
+        if (randomNumber <= 0.33f)
+        {
+            Instantiate(heart, transform.position, Quaternion.identity);
+        }
+
         Destroy(gameObject);
     }
 
@@ -33,11 +45,21 @@ public class TreeEnemy : MonoBehaviour
         //Debug.Log("Hello");
         if (collision.gameObject.CompareTag("Player"))
         {
-            HitBySword();
-            //increments new coin to the coin counter
-            totalTreeEnemyKills++;
-            //prints out total number of coins collected by the player to the debug console
-            Debug.Log("You currently have " + totalTreeEnemyKills + " tree enemy kills.");
+            attackCollisions++;
+
+            // Check if collision has occurred twice
+            if (attackCollisions == 2)
+            {
+                // Reset collision counter
+                attackCollisions = 0;
+
+                // Increment kill count and save to PlayerPrefs
+                totalTreeEnemyKills++;
+                PlayerPrefs.SetInt("TreeEnemyKillCount", totalTreeEnemyKills);
+                PlayerPrefs.Save();
+
+                Debug.Log("You currently have " + totalTreeEnemyKills + " tree enemy kills.");
+            }
         }
     }
 }

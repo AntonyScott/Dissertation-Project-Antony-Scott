@@ -1153,7 +1153,6 @@ GameObject:
   - component: {fileID: 2876187633181477423}
   - component: {fileID: 2876187633181477422}
   - component: {fileID: 2876187633181477416}
-  - component: {fileID: 470837329}
   - component: {fileID: 1003455849}
   m_Layer: 6
   m_Name: Player
@@ -1316,19 +1315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   playerStartPosition: {fileID: 11400000, guid: fe5235ff9ece4ac4c825e7455712e762, type: 2}
---- !u!114 &470837329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2876187633181477425}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66d47ec10f5acaa489db0d1dd3c8662e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
 --- !u!114 &1003455849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,8 +1327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab5aaaae53118d47bc93ab799945c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  numberOfHearts: 10
+  health: 20
+  numberOfHearts: 20
   hearts:
   - {fileID: 2876187632275453477}
   - {fileID: 2200771990141869685}
@@ -4021,6 +4007,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1991579741}
+    - target: {fileID: 327515077, guid: f0a94a25952bae147a775faef198d8d8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -79
+      objectReference: {fileID: 0}
     - target: {fileID: 327515078, guid: f0a94a25952bae147a775faef198d8d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4029,9 +4019,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1991579741}
+    - target: {fileID: 5490974740291157658, guid: f0a94a25952bae147a775faef198d8d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1991579741}
+    - target: {fileID: 5490974740291157658, guid: f0a94a25952bae147a775faef198d8d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveGame
+      objectReference: {fileID: 0}
     - target: {fileID: 7217857161005608716, guid: f0a94a25952bae147a775faef198d8d8, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217857161005608716, guid: f0a94a25952bae147a775faef198d8d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7217857161005608717, guid: f0a94a25952bae147a775faef198d8d8, type: 3}
       propertyPath: m_Pivot.x

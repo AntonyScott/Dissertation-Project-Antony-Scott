@@ -6,8 +6,9 @@ public class Pot_Chance : MonoBehaviour
 {
     private Animator animator;
 
-    public GameObject coin;
-    public GameObject snake;
+    public GameObject object1;
+    public GameObject object2;
+    public GameObject object3;
 
     // Start is called before the first frame update
     void Awake()
@@ -35,13 +36,17 @@ public class Pot_Chance : MonoBehaviour
 
         float randomNumber = Random.value;
 
-        if(randomNumber <= 0.6f)
+        if(randomNumber <= 0.25f)
         {
-            Instantiate(coin, transform.position, Quaternion.identity);
+            Instantiate(object1, transform.position, Quaternion.identity);
         }
-        else
+        if (randomNumber <= 0.50f)
         {
-            Instantiate(snake, transform.position, Quaternion.identity);
+            Instantiate(object2, transform.position, Quaternion.identity);
+        }
+        else if ((randomNumber <= 1.0f))
+        {
+            Instantiate(object3, transform.position, Quaternion.identity);
         }
         
     }

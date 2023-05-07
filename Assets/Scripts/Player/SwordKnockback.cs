@@ -17,6 +17,7 @@ public class SwordKnockback : MonoBehaviour
             {
                 enemy.GetComponent<EnemyPathfinding>().currentEnemyState = EnemyStates.stagger;
                 StartCoroutine(KnockCoroutine(enemy));
+                collision.GetComponent<TreeEnemy>().HitBySword();
                 Debug.Log("Enemy Hit!");
                 FindObjectOfType<AudioManager>().Play("Enemy Grunt");
             }
@@ -53,7 +54,7 @@ public class SwordKnockback : MonoBehaviour
         Vector2 force = forceDirection.normalized * thrust;
 
         enemy.velocity = force;
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(0.3f);
 
         enemy.velocity = Vector2.zero;
         enemy.GetComponent<EnemyPathfinding>().currentEnemyState = EnemyStates.idle;

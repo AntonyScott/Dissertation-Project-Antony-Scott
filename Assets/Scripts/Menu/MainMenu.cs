@@ -50,6 +50,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_Dropdown resolutionDropdown;
     private Resolution[] resolutions;
 
+    private SaveManager.GameState gameState;
+
     private void Start()
     {
         resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray(); ;
@@ -72,6 +74,8 @@ public class MainMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        gameState = new SaveManager.GameState();
     }
 
     public void SetResolution(int resolutionIndex)
@@ -113,6 +117,8 @@ public class MainMenu : MonoBehaviour
         {
             noSavedGameDialogueBox.SetActive(true);
         }
+
+        
     }
 
     public void ExitButton()
@@ -162,6 +168,11 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void Controls()
+    {
+        SceneManager.LoadScene("Controls");
     }
 
     public void SetBrightness(float brightness)

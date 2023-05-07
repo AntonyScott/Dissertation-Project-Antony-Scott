@@ -11,6 +11,7 @@ public class Coin : MonoBehaviour
     {
         GetComponent<Collider2D>().isTrigger = true;
         animator = GetComponent<Animator>();
+        //DontDestroyOnLoad(this);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +24,11 @@ public class Coin : MonoBehaviour
             Debug.Log("You currently have " + totalCoins + " Coins.");
             //plays coin pickup animation then destroys gameobject
             StartCoroutine(CoinPickup());
+
+            PlayerPrefs.SetInt("CoinCount", totalCoins);
+            PlayerPrefs.Save();
+            //gameState.objectsInScene = SaveManager.GetObjectsInScene();
+
         }
     }
 

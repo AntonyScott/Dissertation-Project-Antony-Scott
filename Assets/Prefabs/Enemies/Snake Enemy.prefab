@@ -190,3 +190,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8054524762129483731}
+  coin: {fileID: 6389833354024017365, guid: a54fc879d898d99438b6fd2c40aa63ac, type: 3}

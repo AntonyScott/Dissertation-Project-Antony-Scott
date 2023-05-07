@@ -12,12 +12,17 @@ public class PauseMenu : MonoBehaviour
 
     public bool loadMenuCalled = false;
 
+    //SaveManager.GameState gameState;
+
+
+
     // Update is called once per frame
     void Awake()
     {
         controls = new MyGameActions();
         controls.UI.Pause.performed += _ => TogglePause();
         //DontDestroyOnLoad(gameObject);
+        //gameState = new SaveManager.GameState();
     }
 
     void OnEnable()
@@ -77,12 +82,13 @@ public class PauseMenu : MonoBehaviour
             Destroy(playerObject);
         }
 
-        string activeScene = SceneManager.GetActiveScene().name;
-        PlayerPrefs.SetString("LevelSaved", activeScene);
+        SaveGame();
 
-        PlayerPrefs.SetInt("TreeEnemyKillCount", TreeEnemy.totalTreeEnemyKills);
-
-        PlayerPrefs.SetInt("SnakeKillCount", Snake.totalSnakeKills);
+        GamePaused = false;
+        /*SaveCoins();
+        SaveEnemyKillCounters();
+        SaveCurrentRoom();
+        SaveManager.SaveGame(gameState);*/
 
         // Load the Main Menu scene
         SceneManager.LoadScene("Main Menu");
@@ -94,6 +100,16 @@ public class PauseMenu : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void SaveGame()
+    {
+        string activeScene = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("LevelSaved", activeScene);
+
+        PlayerPrefs.SetInt("TreeEnemyKillCount", TreeEnemy.totalTreeEnemyKills);
+
+        PlayerPrefs.SetInt("SnakeKillCount", Snake.totalSnakeKills);
+    }
+
     public bool GetLoadMenuCalled()
     {
         return loadMenuCalled;
@@ -101,10 +117,14 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        string activeScene = SceneManager.GetActiveScene().name;
-        PlayerPrefs.SetString("LevelSaved", activeScene);
+        /*string activeScene = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("LevelSaved", activeScene);*/
+
+        //SaveGame();
 
         Debug.Log("Quit game!");
+        //pauseMenuUI.SetActive(false);
+        //GamePaused = false;
         Application.Quit();
     }
 }

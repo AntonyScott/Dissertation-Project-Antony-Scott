@@ -12,6 +12,8 @@ TagManager:
   - Snake Enemy
   - Tree Enemy
   - Break_Chance
+  - Heart
+  - PlayerHit
   layers:
   - Default
   - TransparentFX
