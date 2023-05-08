@@ -23,7 +23,7 @@ public class BossEnemy : MonoBehaviour
     {
         animator.SetBool("hit", true);
         hitCount++;
-        if (hitCount == 2)
+        if (hitCount == 10)
         {
             Debug.Log("Boss death");
             StartCoroutine(BossDeath());
@@ -97,7 +97,11 @@ public class BossEnemy : MonoBehaviour
         //Debug.Log("Hello");
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine (BossDeath());
+            if(hitCount < 10)
+            {
+                hitCount++;
+                HitBySword();
+            }
         }
     }
 }
