@@ -9,6 +9,7 @@ public class HeartPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerHealth>().RestoreHeart();
+            FindObjectOfType<AudioManager>().Play("Heart Pickup");
             Destroy(gameObject);
         }
     }

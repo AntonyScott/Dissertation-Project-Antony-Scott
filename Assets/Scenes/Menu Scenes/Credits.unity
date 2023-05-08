@@ -181,12 +181,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "With the promise that he will be fully restored to life upon the successful
-    completion of his quest, the warrior sets out on a perilous journey to rescue
-    the Princess and vanquish the malevolent wizard once and for all. Armed with
-    nothing but his wits, his sword, and his unyielding determination, the player
-    takes on the role of this legendary hero and ventures forth into the unknown
-    depths of Elridia.\r"
+  m_text: 'Music:
+
+    One Bard Band by Alexander Nakarada - https://www.chosic.com/download-audio/29651/
+
+
+    Now
+    We Ride by Alexander Nakareda - https://www.chosic.com/download-audio/29657/
+
+
+    Prepare
+    For War by Alexander Nakareda - https://www.chosic.com/download-audio/29659/
+
+
+    Music
+    sourced via chosic.com
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -213,7 +224,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.5
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -221,7 +232,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -471,7 +482,7 @@ GameObject:
   - component: {fileID: 416985552}
   - component: {fileID: 416985551}
   m_Layer: 5
-  m_Name: Title
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,7 +528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DEADGUARD
+  m_text: CREDITS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -652,10 +663,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Prepare to explore a land of wonder and danger, filled with magic, monsters,
-    and mystery. The fate of the kingdom rests in your hands, brave warrior. Will
-    you have what it takes to rescue the Princess and restore peace to Elridia? The
-    adventure awaits!\r"
+  m_text: 'SFX:
+
+    Cartoon Mumble Speak - https://freesound.org/people/dersuperanton/sounds/435876/
+
+
+
+    Footsteps
+    - https://opengameart.org/content/footsteps-0
+
+
+
+    Enemy Grunt, Sword Swing
+    and Coin sounds - https://assetstore.unity.com/packages/2d/free-2d-mega-pack-177430
+
+
+
+    Sourced
+    via freesound.com, opengameart.org and the Unity Asset Store.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -682,7 +707,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.05
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -690,7 +715,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -782,7 +807,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 756001904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda8df009bf867b45b2d115af289fd4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8110d2cf6fb5d0d40859bacf1cb101f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   texts:
@@ -792,8 +817,8 @@ MonoBehaviour:
   - {fileID: 605175386}
   fadeInDuration: 1
   fadeOutDuration: 1
-  firstTextBoxDuration: 2.5
-  delayBetweenTransitions: 10
+  firstTextBoxDuration: 5
+  delayBetweenTransitions: 5
 --- !u!1 &758842125
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,12 +978,35 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In a far-off land known as Elridia, a terrible calamity has struck the
-    kingdom. The beloved Princess has been kidnapped by an evil wizard and taken
-    to a dark fortress deep in the heart of the forbidden forest. In a desperate
-    bid to rescue their daughter and restore peace to the realm, the royal family
-    has turned to the ancient arts of necromancy to resurrect the greatest warrior
-    ever known to Elridia.\r"
+  m_text: 'Programmer/Script Writer:
+
+    Antony Scott - 25295522
+
+
+    Animations/Graphics:
+
+    Knight
+    16x16 sprite - https://pixelfelix.itch.io/knight-anim-set
+
+
+    Zelda like gfx
+    - https://opengameart.org/content/zelda-like-tilesets-and-sprites
+
+
+    Wood
+    sign texture - https://www.vecteezy.com/vector-art/8826392-wood-texture-seamless-repeat-print
+
+
+
+    Pixel
+    hearts - https://opengameart.org/content/pixel-hearts
+
+
+    Coin sprite - https://opengameart.org/content/16x16-spinning-coin-pickup-animation
+
+
+    Sourced
+    by opengameart.org,  itch.io and vecteezy.com'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -985,7 +1033,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.5
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -993,7 +1041,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1035,3 +1083,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829561354}
   m_CullTransparentMesh: 1
+--- !u!1001 &2024432120
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4623680600841515505, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623680600841515511, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db3fd53770cb74948b2f9bcf08c8b992, type: 3}

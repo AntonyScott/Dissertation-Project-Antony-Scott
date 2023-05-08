@@ -20990,7 +20990,7 @@ GameObject:
   - component: {fileID: 1755647414}
   - component: {fileID: 1755647411}
   m_Layer: 0
-  m_Name: cave_80
+  m_Name: Dungeon2_Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21809,10 +21809,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 146563968, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 215509621, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 990332579, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1766615756}
+    - target: {fileID: 1392344432, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140665593, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2876187633181477420, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -21860,6 +21876,14 @@ PrefabInstance:
     - target: {fileID: 2876187633181477425, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254385516452604138, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825030076092661666, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4946962d3fb76e4f8fdf8f3b93f9dae, type: 3}

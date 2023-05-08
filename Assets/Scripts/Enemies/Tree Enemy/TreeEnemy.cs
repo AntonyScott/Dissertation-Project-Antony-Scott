@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TreeEnemy : MonoBehaviour
@@ -10,7 +9,7 @@ public class TreeEnemy : MonoBehaviour
 
     public GameObject heart;
 
-    private int attackCollisions = 0;
+    private int hitCount = 0;
 
     void Awake()
     {
@@ -20,8 +19,11 @@ public class TreeEnemy : MonoBehaviour
 
     public void HitBySword()
     {
-        animator.SetBool("hit", true);
-        StartCoroutine(TreeDeath());
+        hitCount++;
+        if (hitCount == 2)
+        {
+            StartCoroutine(TreeDeath());
+        }
     }
 
     public IEnumerator TreeDeath()
@@ -37,28 +39,25 @@ public class TreeEnemy : MonoBehaviour
             Instantiate(heart, transform.position, Quaternion.identity);
         }
 
+        totalTreeEnemyKills++;
+        Debug.Log("Tree hit");
+        PlayerPrefs.SetInt("TreeEnemyKillCount", totalTreeEnemyKills);
+        PlayerPrefs.Save();
+
+        Debug.Log("You currently have " + totalTreeEnemyKills + " tree enemy kills.");
+
+        animator.SetBool("hit", true); // Set the "hit" parameter of the animator to true
+
         Destroy(gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("Hello");
         if (collision.gameObject.CompareTag("Player"))
         {
-            attackCollisions++;
-
-            // Check if collision has occurred twice
-            if (attackCollisions == 2)
+            if (hitCount > 0 && !animator.GetBool("hit"))
             {
-                // Reset collision counter
-                attackCollisions = 0;
-
-                // Increment kill count and save to PlayerPrefs
-                totalTreeEnemyKills++;
-                PlayerPrefs.SetInt("TreeEnemyKillCount", totalTreeEnemyKills);
-                PlayerPrefs.Save();
-
-                Debug.Log("You currently have " + totalTreeEnemyKills + " tree enemy kills.");
+                hitCount = 0;
             }
         }
     }

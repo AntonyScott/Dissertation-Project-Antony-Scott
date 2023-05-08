@@ -12,7 +12,6 @@ public class Snake : MonoBehaviour
 
     void Awake()
     {
-        //GetComponent<Collider2D>().isTrigger = true;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }

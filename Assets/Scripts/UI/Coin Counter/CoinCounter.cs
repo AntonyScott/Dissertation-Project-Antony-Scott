@@ -11,7 +11,7 @@ public class CoinCounter : MonoBehaviour
     {
         coinCounterText = GetComponent<TMP_Text>();
 
-        // Load the saved coin count
+        // Load the saved coin count from player preferences
         if (PlayerPrefs.HasKey("CoinCount"))
         {
             int coinCount = PlayerPrefs.GetInt("CoinCount");

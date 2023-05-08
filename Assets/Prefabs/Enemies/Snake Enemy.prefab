@@ -103,7 +103,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   baseAttack: 100
   moveSpeed: 5
   target: {fileID: 0}
-  chaseRadius: 10
+  chaseRadius: 5
   attackRadius: 1
   basePosition: {fileID: 0}
   currentEnemyState: 0

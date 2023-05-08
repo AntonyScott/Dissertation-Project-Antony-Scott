@@ -91,5 +91,5 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 79bd402f963e43645aa15f2efb7cc823, type: 3}
     volume: 0.3
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
