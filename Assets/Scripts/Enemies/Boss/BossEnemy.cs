@@ -37,7 +37,7 @@ public class BossEnemy : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
 
         //if player has killed <= 20 snakes, <= 5 tree enemies and amassed <= coins
-        if (PlayerPrefs.GetInt("SnakeKillCount") <= 5 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 5 
+        /*if (PlayerPrefs.GetInt("SnakeKillCount") <= 5 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 5 
             && PlayerPrefs.GetInt("Coin Count") <= 60)
         {
             SceneManager.LoadScene("Ending 1");
@@ -45,7 +45,7 @@ public class BossEnemy : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("Player"));
         }
 
-        if (PlayerPrefs.GetInt("SnakeKillCount") <= 8 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 15
+        else if (PlayerPrefs.GetInt("SnakeKillCount") <= 8 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 15
             && PlayerPrefs.GetInt("Coin Count") <= 30)
         {
             SceneManager.LoadScene("Ending 2");
@@ -53,7 +53,7 @@ public class BossEnemy : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("Player"));
         }
 
-        if (PlayerPrefs.GetInt("SnakeKillCount") <= 30 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 10
+        else if (PlayerPrefs.GetInt("SnakeKillCount") <= 30 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 10
             && PlayerPrefs.GetInt("Coin Count") <= 0)
         {
             SceneManager.LoadScene("Ending 3");
@@ -85,7 +85,52 @@ public class BossEnemy : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("Player"));
         }
 
+        else
+        {
+            SceneManager.LoadScene("Ending 4");
+            Destroy(GameObject.FindGameObjectWithTag("Player"));
+        }
+
+        Destroy(gameObject);*/
+
+        if (PlayerPrefs.GetInt("SnakeKillCount") <= 5 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 5
+            && PlayerPrefs.GetInt("Coin Count") <= 60)
+        {
+            SceneManager.LoadScene("Ending 1");
+        }
+        else if (PlayerPrefs.GetInt("SnakeKillCount") <= 8 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 15
+            && PlayerPrefs.GetInt("Coin Count") <= 30)
+        {
+            SceneManager.LoadScene("Ending 2");
+        }
+        else if (PlayerPrefs.GetInt("SnakeKillCount") <= 20 && PlayerPrefs.GetInt("TreeEnemyKillCount") <= 10)
+        {
+            if (PlayerPrefs.GetInt("Coin Count") <= 0)
+            {
+                SceneManager.LoadScene("Ending 3");
+            }
+            else if (PlayerPrefs.GetInt("Coin Count") <= 20)
+            {
+                SceneManager.LoadScene("Ending 5");
+            }
+            else if (PlayerPrefs.GetInt("Coin Count") <= 45)
+            {
+                SceneManager.LoadScene("Ending 4");
+            }
+        }
+        else if (PlayerPrefs.GetInt("SnakeKillCount") == 0 && PlayerPrefs.GetInt("TreeEnemyKillCount") == 0
+            && PlayerPrefs.GetInt("Coin Count") == 0)
+        {
+            SceneManager.LoadScene("Ending 6");
+        }
+        else
+        {
+            SceneManager.LoadScene("Ending 4");
+        }
+
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
         Destroy(gameObject);
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)

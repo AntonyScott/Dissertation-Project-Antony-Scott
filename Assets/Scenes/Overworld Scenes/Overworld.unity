@@ -31475,26 +31475,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6732963316450803895, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: m_Name
-      value: NPC_DIALOGUE_EXAMPLE
+      value: NPC_DIALOGUE_EXAMPLE_2
       objectReference: {fileID: 0}
     - target: {fileID: 6732963316450803896, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: npcName
-      value: NPC Name placeholder
+      value: Ness
       objectReference: {fileID: 0}
     - target: {fileID: 6732963316450803896, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: dialogue
-      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque dui,
-        gravida at dui quis, ullamcorper aliquam risus. Phasellus nec nulla ut erat
-        molestie ullamcorper. Curabitur id ornare libero, sit amet consequat enim.
-        Cras non dui in mauris rhoncus tincidunt. Aliquam erat volutpat. Pellentesque
-        tincidunt lobortis justo at vestibulum. Sed egestas, diam vel blandit varius,
-        risus magna tempus purus, ut tristique risus purus suscipit nulla. Vestibulum
-        sed turpis eu arcu tincidunt porta non non risus. Proin tristique aliquet
-        nibh, a consequat nulla cursus non. Ut ornare molestie lorem, et faucibus
-        justo varius in. Cras vitae ultrices quam. Proin pellentesque mauris lacus,
-        sed commodo mi pulvinar ut. Donec ut placerat ante. Praesent velit felis,
-        dictum non libero at, elementum sodales nulla. Cras interdum nibh ex, vel
-        pretium enim porta a.  '
+      value: The wood king is a being of pure malevolence. He has been around for
+        centuries, and there are stories of him even before the kingdom of Elridia
+        was founded. Do not to underestimate him in your fight for the princess.
       objectReference: {fileID: 0}
     - target: {fileID: 6732963316450803896, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: dialogueBox
@@ -31508,8 +31499,20 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 762654956}
+    - target: {fileID: 6732963316450803897, guid: 3517c24490852f34881c26909220297e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 378896141, guid: a214d7bf8aa3bc24cbc28ad75823a94a, type: 3}
     - target: {fileID: 6732963316450803898, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732963316450803898, guid: 3517c24490852f34881c26909220297e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732963316450803898, guid: 3517c24490852f34881c26909220297e, type: 3}
+      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6732963316450803898, guid: 3517c24490852f34881c26909220297e, type: 3}
@@ -31599,7 +31602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 3737355651371708344}
   dialogueText: {fileID: 3737355650014968474}
-  dialogue: The north region of Rhine holds many dangers.
+  dialogue: The north region of Elridia holds many dangers. Be wary travelers.
   playerInRange: 0
 --- !u!4 &1216186752 stripped
 Transform:
@@ -32034,8 +32037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 3737355651371708344}
   dialogueText: {fileID: 3737355650014968474}
-  dialogue: Here lies brave warriors, perished in their fight against the evil snake
-    king
+  dialogue: Here lies brave warriors, perished in their fight against the evil Wood
+    king and his armies.
   playerInRange: 0
 --- !u!61 &1570972612
 BoxCollider2D:
@@ -33645,26 +33648,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6732963316450803895, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: m_Name
-      value: NPC_DIALOGUE_EXAMPLE
+      value: NPC_DIALOGUE_EXAMPLE_1
       objectReference: {fileID: 0}
     - target: {fileID: 6732963316450803896, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: npcName
-      value: NPC Name placeholder
+      value: Galahad
       objectReference: {fileID: 0}
     - target: {fileID: 6732963316450803896, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: dialogue
-      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque dui,
-        gravida at dui quis, ullamcorper aliquam risus. Phasellus nec nulla ut erat
-        molestie ullamcorper. Curabitur id ornare libero, sit amet consequat enim.
-        Cras non dui in mauris rhoncus tincidunt. Aliquam erat volutpat. Pellentesque
-        tincidunt lobortis justo at vestibulum. Sed egestas, diam vel blandit varius,
-        risus magna tempus purus, ut tristique risus purus suscipit nulla. Vestibulum
-        sed turpis eu arcu tincidunt porta non non risus. Proin tristique aliquet
-        nibh, a consequat nulla cursus non. Ut ornare molestie lorem, et faucibus
-        justo varius in. Cras vitae ultrices quam. Proin pellentesque mauris lacus,
-        sed commodo mi pulvinar ut. Donec ut placerat ante. Praesent velit felis,
-        dictum non libero at, elementum sodales nulla. Cras interdum nibh ex, vel
-        pretium enim porta a.  '
+      value: I've heard tales of the dark cave, deep in the heart of the forbidden
+        forest, where even the bravest adventurers fear to tread. If you're thinking
+        of going there, you'll need all the courage you can muster.
       objectReference: {fileID: 0}
     - target: {fileID: 6732963316450803896, guid: 3517c24490852f34881c26909220297e, type: 3}
       propertyPath: dialogueBox

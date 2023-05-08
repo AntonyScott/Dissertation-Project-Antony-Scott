@@ -93,3 +93,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Hiss
+    clip: {fileID: 8300000, guid: 6716517f9a55d8f4095799cb80aed355, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -64,11 +64,17 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && !isInvincible)
         {
+            TakeDamage(1); // or however much damage you want the enemy to do
+            StartCoroutine(InvincibilityFrames(2f));
+        }
+
+        if (other.CompareTag("Boss Enemy") && !isInvincible)
+        {
             TakeDamage(2); // or however much damage you want the enemy to do
             StartCoroutine(InvincibilityFrames(2f));
         }
 
-        if(other.CompareTag("Snake Enemy") && !isInvincible)
+        if (other.CompareTag("Snake Enemy") && !isInvincible)
         {
             TakeDamage(1);
             StartCoroutine(InvincibilityFrames(5f));

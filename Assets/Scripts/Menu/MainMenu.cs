@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
+//using UnityEngine.Rendering.PostProcessing;
 using TMPro;
 using UnityEditor.Rendering;
 using System;
 using System.Linq;
+using UnityEngine.Rendering;
 
 public class MainMenu : MonoBehaviour
 {
@@ -193,6 +196,7 @@ public class MainMenu : MonoBehaviour
 
     public void GraphicsApply()
     {
+        _brightnessLevel = brightnessSlider.value;
         PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel);
         //change brightness with post processing or whatever it is
 

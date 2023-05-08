@@ -6,11 +6,9 @@ public class SwordKnockback : MonoBehaviour
 {
     [SerializeField] private float thrust;
 
-    [SerializeField] protected float damage;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss Enemy"))
         {
             Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
             if (enemy != null)
