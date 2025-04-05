@@ -51,10 +51,10 @@ public class SwordKnockback : MonoBehaviour
         Vector2 forceDirection = enemy.transform.position - transform.position;
         Vector2 force = forceDirection.normalized * thrust;
 
-        enemy.velocity = force;
+        enemy.linearVelocity = force;
         yield return new WaitForSeconds(0.3f);
 
-        enemy.velocity = Vector2.zero;
+        enemy.linearVelocity = Vector2.zero;
         enemy.GetComponent<EnemyPathfinding>().currentEnemyState = EnemyStates.idle;
     }
 }
